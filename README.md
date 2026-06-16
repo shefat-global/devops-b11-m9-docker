@@ -70,7 +70,7 @@ docker run -dit --name container2 alpine sh
 
 docker inspect container1 | grep IPAddress
 docker exec -it container1 sh
-ping <container2-ip>
+ping 172.17.0.3
 ```
 
 ---
