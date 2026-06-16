@@ -1,4 +1,4 @@
-# 🐳 Module 9 Assignment  
+# Module 9 Assignment  
 ## Docker Installation and Networking on AWS EC2
 
 ---
@@ -10,13 +10,13 @@
 
 ---
 
-# 🎯 Objective
+# Objective
 
 This assignment demonstrates Docker installation, configuration, and networking concepts using AWS EC2.
 
 ---
 
-# 🖥️ Step 1 — EC2 Setup & SSH Connection
+# Step 1 — EC2 Setup & SSH Connection
 
 AWS EC2 Ubuntu instance was created and connected via SSH:
 
@@ -26,7 +26,7 @@ ssh -i key.pem ubuntu@52.77.252.209
 
 ---
 
-# ⚙️ Step 2 — Docker Installation
+# Step 2 — Docker Installation
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -37,7 +37,7 @@ sudo systemctl enable docker
 
 ---
 
-# 🔐 Step 3 — Docker Permission Setup
+# Step 3 — Docker Permission Setup
 
 ```bash
 sudo usermod -aG docker $USER
@@ -46,7 +46,7 @@ newgrp docker
 
 ---
 
-# 🧪 Step 4 — Hello World Test
+# Step 4 — Hello World Test
 
 ```bash
 docker run hello-world
@@ -54,7 +54,7 @@ docker run hello-world
 
 ---
 
-# 🌐 Step 5 — Docker Networks
+# Step 5 — Docker Networks
 
 ```bash
 docker network ls
@@ -62,7 +62,7 @@ docker network ls
 
 ---
 
-# 🔵 Step 6 — Bridge Network
+# Step 6 — Bridge Network
 
 ```bash
 docker run -dit --name container1 alpine sh
@@ -75,7 +75,7 @@ ping <container2-ip>
 
 ---
 
-# 🟢 Step 7 — Host Network
+# Step 7 — Host Network
 
 ```bash
 docker run -dit --name host-container --network host alpine sh
@@ -84,7 +84,7 @@ ip a
 
 ---
 
-# ⚫ Step 8 — None Network
+# Step 8 — None Network
 
 ```bash
 docker run -dit --name none-container --network none alpine sh
@@ -97,7 +97,7 @@ Expected: No internet access
 
 ---
 
-# 🟣 Step 9 — Custom Bridge Network
+# Step 9 — Custom Bridge Network
 
 ```bash
 docker network create my_bridge_network
@@ -111,7 +111,7 @@ ping app2
 
 ---
 
-# 📊 Summary
+# Summary
 
 | Network | Type | Use |
 |--------|------|-----|
@@ -122,7 +122,7 @@ ping app2
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
 All screenshots are stored in:
 screenshots/ folder in this GitHub repo.
@@ -153,11 +153,11 @@ screenshots/ folder in this GitHub repo.
 
 ---
 
-# 📌 EC2 IP USED
+# EC2 IP USED
 52.77.252.209
 
 ---
 
-# ✅ Conclusion
+# Conclusion
 
 Docker was successfully installed and all networking modes were tested on AWS EC2.
